@@ -10,9 +10,9 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'aceternity.com',
+                hostname: 'imagedelivery.net',
                 port: '',
-                pathname: 'images/products/thumbnails/**',
+                pathname: '/**',
             },
         ],
     }
