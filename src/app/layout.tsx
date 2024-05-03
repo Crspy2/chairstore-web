@@ -5,9 +5,24 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chairstore",
-  description: "Powerful, Secure, and Undetected cheats for a fair price. Chairstore is dedicated to providing" +
+    metadataBase: new URL("https://chairstore.vip"),
+    title: "ChairStore",
+    description: "Powerful, secure, and undetected cheats for a fair price. ChairStore is dedicated to providing" +
       "customers with tools to make their games easier to win.",
+    authors: [{ name: "Crspy" }],
+    keywords: ["cheats", "chair", "linear", "klar", "alphacheats", "lethal", "spoofer"],
+    icons: "/chairstore.png",
+    openGraph: {
+        type: "website",
+        url: "https://chairstore.vip",
+        title: "ChairStore",
+        description: "Powerful, secure, and undetected cheats for a fair price. ChairStore is dedicated to providing" +
+            "customers with tools to make their games easier to win.",
+        siteName: "ChairStore",
+        images: [{
+            url: "/chairstore.png",
+        }],
+    },
 };
 
 export default function RootLayout({
