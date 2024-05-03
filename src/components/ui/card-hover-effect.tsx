@@ -1,9 +1,10 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import {useEffect, useState} from "react";
+import {ReactNode, useEffect, useState} from "react";
+import Image from "next/image";
 
-export const HoverEffect = ({
+export const ProductCards = ({
                                 items,
                                 className,
                             }: {
@@ -75,23 +76,19 @@ export const Card = ({
                         className,
                         children,
                      }: {
-    image?: string;
+    image: string;
     className?: string;
-    children: React.ReactNode;
+    children: ReactNode;
 }) => {
     return (
         <section
             className={cn(
-                "group rounded-2xl w-auto h-auto aspect-square p-4 overflow-hidden border border-transparent dark:border-white/[0.2] relative z-20",
+                "group rounded-2xl w-auto h-auto aspect-square overflow-hidden border border-transparent dark:border-white/[0.2] relative z-20",
                 className
             )}
-            style={{
-                backgroundImage: `url("${image}")`,
-                backgroundSize: "cover",
-                backgroundPosition: "center center",
-            }}
         >
-            <div className="nohover relative z-50 opacity-0 group-hover:opacity-[5] duration-500">
+            <Image src={image} alt="Product Image" width={256} height={256} className="absolute object-cover w-full h-full group-hover:opacity-50 bg-neutral-950" />
+            <div className="relative z-50 opacity-0 group-hover:opacity-100 duration-500">
                 <div className="p-4">
                     {children}
                 </div>
@@ -122,7 +119,7 @@ export const CardDescription = ({
     return (
         <p
             className={cn(
-                "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+                "mt-8 text-zinc-300 tracking-wide leading-relaxed text-sm",
                 className
             )}
         >
