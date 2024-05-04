@@ -21,7 +21,7 @@ export const ProductCards = ({
     return (
         <div
             className={cn(
-                "grid grid-cols-2 md:grid-cols-3 py-10 px-10",
+                "grid grid-cols-2 md:grid-cols-3 py-10 px-10 max-w-3xl mx-auto",
                 className
             )}
         >
@@ -29,7 +29,7 @@ export const ProductCards = ({
                 <Link
                     href={`https://chairstore.vip/product${item?.slug}`}
                     key={item?.slug}
-                    className="relative group block p-2 h-[80%] w-[80%]"
+                    className="relative group block p-2 h-full w-full"
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >

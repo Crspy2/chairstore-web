@@ -63,9 +63,7 @@ const Products = () => {
     return (
         <div className="my-16" id="products">
             <h3 className="text-4xl md:text-6xl font-bold text-gray-100 text-center font-poppins">Products</h3>
-            <div className="mx-auto max-w-6xl px-8">
-                <ProductCards items={projects}/>
-            </div>
+            <ProductCards items={projects}/>
         </div>
     )
 }

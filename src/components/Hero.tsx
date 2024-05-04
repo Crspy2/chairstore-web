@@ -37,7 +37,7 @@ const Hero = () => {
                 <div className="flex justify-center items-center">
                     <TypewriterEffectSmooth words={words} className="text-blue-500" />
                 </div>
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center">
                     <Stats />
                 </div>
             </div>
