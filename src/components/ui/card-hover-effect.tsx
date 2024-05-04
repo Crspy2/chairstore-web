@@ -29,14 +29,14 @@ export const ProductCards = ({
                 <Link
                     href={`https://chairstore.vip/product${item?.slug}`}
                     key={item?.slug}
-                    className="relative group block p-2 h-[90%] w-[90%]"
+                    className="relative group block p-2 h-[80%] w-[80%]"
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >
                     <AnimatePresence>
                         {hoveredIndex === idx && (
                             <motion.span
-                                className="absolute inset-0 h-full w-full aspect-square bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
+                                className="absolute inset-0 h-auto w-auto aspect-square bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
                                 layoutId="hoverBackground"
                                 initial={{opacity: 0}}
                                 animate={{
@@ -72,7 +72,7 @@ export const Card = ({
     return (
         <section
             className={cn(
-                "group rounded-2xl w-[90%] h-[90%] aspect-square overflow-hidden border border-transparent dark:border-white/[0.2] relative z-20",
+                "group rounded-2xl w-auto h-auto aspect-square overflow-hidden border border-transparent dark:border-white/[0.2] relative z-20",
                 className
             )}
         >
