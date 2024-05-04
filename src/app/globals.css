@@ -6,5 +6,5 @@
 
 
 :root {
-    @apply bg-neutral-950
+    @apply bg-neutral-950 scroll-smooth
 }

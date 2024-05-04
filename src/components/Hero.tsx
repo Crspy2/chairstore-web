@@ -7,7 +7,7 @@ import Stats from "@/components/Stats";
 const Hero = () => {
     const words = [
         {
-            text: "Chairstore",
+            text: "ChairStore",
             className: "text-blue-500 dark:text-blue-500"
         },
         {
