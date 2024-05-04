@@ -8,8 +8,16 @@ import {
 
 const faqs = [
     {
-        question: 'Question',
-        answer: 'Answer',
+        question: 'Do You Support Paypal & Card?',
+        answer: 'Yes We Support Apple & Google Pay, Paypal f&f, Crypto, Cashapp & Card',
+    },
+    {
+        question: 'How Long Will It Take To Get The Cheat After I Send The Money?',
+        answer: 'Our website operates entirely on automation, ensuring instant delivery. Upon payment receipt, you can expect to receive an email within moments!',
+    },
+    {
+        question: 'Where Do I Go If I Need Support?',
+        answer: 'Feel free to join our Discord server and create a support ticket. Our dedicated staff team is ready to assist you promptly.',
     },
 ]
 
