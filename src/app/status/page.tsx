@@ -15,11 +15,11 @@ type I_PStatus = {
 const productStatuses: I_PStatus[] = [
     {
         name: "Klar Lite",
-        status: E_Status.Risky,
+        status: E_Status.Undetected,
     },
     {
         name: "Klar Full",
-        status: E_Status.Risky,
+        status: E_Status.Undetected,
     },
     {
         name: "R6 Recoil Helper",
