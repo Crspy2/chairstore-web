@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import {ReactNode, useEffect, useState} from "react";
+import {ReactNode, useState} from "react";
 import Image from "next/image";
 
 export const ProductCards = ({
@@ -18,17 +18,6 @@ export const ProductCards = ({
 }) => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = "https://embed.billgang.store/embed.js";
-        script.async = true;
-        document.body.appendChild(script);
-
-        return () => {
-            document.body.removeChild(script);
-        };
-    }, []);
-
     return (
         <div
             className={cn(
@@ -40,14 +29,14 @@ export const ProductCards = ({
                 <Link
                     href={`https://chairstore.vip/product${item?.slug}`}
                     key={item?.slug}
-                    className="relative group block p-2 h-full w-full"
+                    className="relative group block p-2 h-[90%] w-[90%]"
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >
                     <AnimatePresence>
                         {hoveredIndex === idx && (
                             <motion.span
-                                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
+                                className="absolute inset-0 h-full w-full aspect-square bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
                                 layoutId="hoverBackground"
                                 initial={{opacity: 0}}
                                 animate={{
@@ -83,7 +72,7 @@ export const Card = ({
     return (
         <section
             className={cn(
-                "group rounded-2xl w-auto h-auto aspect-square overflow-hidden border border-transparent dark:border-white/[0.2] relative z-20",
+                "group rounded-2xl w-[90%] h-[90%] aspect-square overflow-hidden border border-transparent dark:border-white/[0.2] relative z-20",
                 className
             )}
         >
