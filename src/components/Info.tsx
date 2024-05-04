@@ -1,20 +1,20 @@
 import Card from "@/components/ui/reveal-card";
 import {CanvasRevealEffect} from "@/components/ui/canvas-reveal-effect";
-import {CreditCard, Fingerprint, LockKeyhole, MessagesSquare, Settings} from "lucide-react";
+import {LockKeyhole, MessagesSquare, Settings} from "lucide-react";
 
 const Info = () => {
     return (
         <>
             <div className="flex flex-col items-center justify-center max-w-6xl mx-auto">
-                <h3 className="text-6xl font-bold text-gray-100 font-poppins">Well Made</h3>
-                <p className=" text-gray-300 text-center">
+                <h3 className="text-4xl md:text-6xl font-bold text-gray-100 font-poppins">Well Made</h3>
+                <p className="text-sm md:text-base text-gray-300 text-center mx-8 lg:mx-0">
                     Our products are made by veterans in the field of game hacking, and have been tested
                     thoroughly before distribution to make sure that your experience is the best it can be.
                     Below, you can see the three pillars which we build our business on top of:
                 </p>
             </div>
-            <div className="max-w-6xl py-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-8">
-            <Card title="Easy to Setup" description="Customize the features in our products to match your playstyle. Enable or disable features on a dime!" icon={<Settings className="h-10 w-10 text-white group-hover/canvas-card:text-white" />}>
+            <div className="max-w-6xl py-20 flex flex-row items-center justify-center w-full gap-4 mx-auto px-8">
+                <Card title="Easy to Setup" description="Customize the features in our products to match your playstyle. Enable or disable features on a dime!" icon={<Settings className="h-10 w-10 text-white group-hover/canvas-card:text-white" />}>
                     <CanvasRevealEffect
                         animationSpeed={5.1}
                         containerClassName="bg-emerald-900"

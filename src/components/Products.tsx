@@ -62,7 +62,7 @@ const Products = () => {
 
     return (
         <div className="my-16">
-            <h3 className="text-6xl font-bold text-gray-100 text-center font-poppins">Products</h3>
+            <h3 className="text-4xl md:text-6xl font-bold text-gray-100 text-center font-poppins">Products</h3>
             <div className="max-w-6xl mx-auto px-8">
                 <ProductCards items={projects}/>
             </div>
