@@ -1,9 +1,9 @@
 enum E_Status {
-    Detected = "DETECTED",
-    Updating = "UPDATING",
-    Development = "DEVELOPMENT",
-    Risky = "RISKY",
-    Undetected = "UNDETECTED",
+    Detected = "detected",
+    Updating = "updating",
+    Development = "development",
+    Risky = "risky",
+    Undetected = "undetected",
 }
 
 
