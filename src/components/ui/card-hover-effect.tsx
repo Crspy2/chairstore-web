@@ -27,7 +27,7 @@ export const ProductCards = ({
         >
             {items.map((item, idx) => (
                 <Link
-                    href={`https://chairstore.vip/product${item?.slug}`}
+                    href={`${process.env.NEXT_PUBLIC_BILLGANG_DOMAIN}product${item?.slug}`}
                     key={item?.slug}
                     className="relative group block p-2 h-full w-full"
                     onMouseEnter={() => setHoveredIndex(idx)}
