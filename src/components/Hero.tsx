@@ -29,7 +29,7 @@ const Hero = () => {
                 </h1>
                 <p></p>
                 <p className="text-gray-300 max-w-2xl mx-auto my-2 text-sm md:text-base text-center relative z-10">
-                    Welcome to ChairStore, dedicated resellers that are devoted to our
+                    Welcome to ChairStore! We are dedicated resellers that are devoted to our
                     customer&apos;s satisfaction. We provide the best cheats on the market
                     to give you an edge against your opponents and make your games easier
                     to win.
