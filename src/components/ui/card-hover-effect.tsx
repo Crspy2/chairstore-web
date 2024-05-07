@@ -1,8 +1,10 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
-import {ReactNode, useState} from "react";
+import {ReactNode, useContext, useEffect, useState} from "react";
 import Image from "next/image";
+import Script from "next/script";
+import {Button} from "@nextui-org/button";
+import {NavbarContext} from "@/lib/context";
 
 export const ProductCards = ({
                                 items,
@@ -18,6 +20,10 @@ export const ProductCards = ({
 }) => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
+    const { hideNavbar } = useContext(NavbarContext);
+    const handleCardClick = () => {
+        hideNavbar(true);
+    };
     return (
         <div
             className={cn(
@@ -25,9 +31,10 @@ export const ProductCards = ({
                 className
             )}
         >
+            <script src="https://platform.billgang.com/embed.js"></script>
+
             {items.map((item, idx) => (
-                <Link
-                    href={`${process.env.NEXT_PUBLIC_BILLGANG_DOMAIN}product${item?.slug}`}
+                <div
                     key={item?.slug}
                     className="relative group block p-2 h-full w-full"
                     onMouseEnter={() => setHoveredIndex(idx)}
@@ -53,17 +60,25 @@ export const ProductCards = ({
                     <Card image={item.image}>
                         <CardTitle>{item.title}</CardTitle>
                         <CardDescription>{item.description}</CardDescription>
+                        <button
+                            data-billgang-product-path={item?.slug}
+                            data-billgang-domain="chairstore.bgng.io"
+                            className="text-white bg-zinc-700 p-2 rounded-md mt-2 text-sm"
+                            onClick={handleCardClick}
+                        >
+                            Purchase
+                        </button>
                     </Card>
-                </Link>
+                </div>
             ))}
         </div>
     );
 };
 
 export const Card = ({
-                        image,
-                        className,
-                        children,
+                         image,
+                         className,
+        children,
                      }: {
     image: string;
     className?: string;
