@@ -5,25 +5,33 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from 'next/navigation'
 import { NavbarContext } from "@/lib/context";
+import {MoveRight} from "lucide-react";
 
 const Navbar = () => {
     const path  = usePathname();
     const { isHidden, hideNavbar } = useContext(NavbarContext)
     const handleNavbarGrowth = () => {
-        hideNavbar(false);
+        hideNavbar();
     };
 
     if (isHidden) return (
-        <nav className="dark block bg-neutral-900/20 border-b-white/10 rounded-full fixed z-[9999] sm:px-4 py-2.5 top-0 left-0 backdrop-filter backdrop-blur-md border-b">
-            <div className="flex flex-wrap items-center justify-between px-8">
-                <button onClick={handleNavbarGrowth} className="flex items-center">
-                    <div className="flex items-center">
-                        <Image src="/chairstore.png" alt="" width={2000} height={2000}
-                               className="w-12 h-12 rounded-md"/>
-                    </div>
-                </button>
+        <nav className="flex justify-between">
+            <div className="dark block bg-neutral-900/20 border-b-white/10 rounded-full fixed z-[9999] sm:px-4 py-2.5 top-0 left-0 backdrop-filter backdrop-blur-md border-b">
+                <div className="flex flex-wrap items-center justify-between px-8">
+                    <button onClick={handleNavbarGrowth} className="flex items-center">
+                        <Link href="/#" className="flex items-center">
+                            <Image src="/chairstore.png" alt="" width={2000} height={2000}
+                                   className="w-12 h-12 rounded-md"/>
+                        </Link>
+                    </button>
+                </div>
+            </div>
+            <div className="fixed flex gap-2 text-neutral-50 right-10 top-2 text-sm font-semibold z-[9999]">
+                Close button here
+                <MoveRight className="my-auto h-6" />
             </div>
         </nav>
+
     );
 
     return (
