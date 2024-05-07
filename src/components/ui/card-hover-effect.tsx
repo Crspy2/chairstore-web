@@ -1,9 +1,7 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import {ReactNode, useContext, useEffect, useState} from "react";
+import {ReactNode, useContext, useState} from "react";
 import Image from "next/image";
-import Script from "next/script";
-import {Button} from "@nextui-org/button";
 import {NavbarContext} from "@/lib/context";
 
 export const ProductCards = ({
