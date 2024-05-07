@@ -38,7 +38,7 @@ const productStatuses: I_PStatus[] = [
 export default function Status() {
     return (
         <main className="dark mt-36">
-            <div className="flex flex-col max-w-6xl mx-auto gap-y-12">
+            <div className="flex flex-col max-w-6xl mx-auto gap-y-12 text-white">
                 {productStatuses.map((p, id) => (
                     <div className="flex justify-between" key={id}>
                         <h1>{p.name}</h1>
