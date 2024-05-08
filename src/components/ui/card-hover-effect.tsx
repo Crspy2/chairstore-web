@@ -29,8 +29,7 @@ export const ProductCards = ({
                 className
             )}
         >
-            {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-            <script src="https://platform.billgang.com/embed.js" />
+            <script src="https://platform.billgang.com/embed.js" async />
 
             {items.map((item, idx) => (
                 <div
@@ -61,7 +60,7 @@ export const ProductCards = ({
                         <CardDescription>{item.description}</CardDescription>
                         <button
                             data-billgang-product-path={item?.slug}
-                            data-billgang-domain="chairstore.bgng.io"
+                            data-billgang-domain={process.env.NEXT_PUBLIC_BILLGANG_DOMAIN}
                             className="text-white bg-zinc-700 p-2 rounded-md mt-2 text-sm"
                             onClick={handleCardClick}
                         >
