@@ -29,7 +29,8 @@ export const ProductCards = ({
                 className
             )}
         >
-            <script src="https://platform.billgang.com/embed.js" async />
+            {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+            <script src="https://platform.billgang.com/embed.js" />
 
             {items.map((item, idx) => (
                 <div
