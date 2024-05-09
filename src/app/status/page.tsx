@@ -26,6 +26,10 @@ const productStatuses: I_PStatus[] = [
         status: E_Status.Undetected,
     },
     {
+        name: "VALORANT Lite",
+        status: E_Status.Undetected,
+    },
+    {
         name: "VALORANT Full",
         status: E_Status.Undetected,
     },
