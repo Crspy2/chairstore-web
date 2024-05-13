@@ -16,7 +16,7 @@ const Stats = () => {
             <div className="flex flex-col stat justify-center items-center w-[30dvh]">
                 <div className="stat-title text-gray-400">Customers</div>
                 <div className="stat-value text-gray-200">
-                    <CountUp end={200} suffix="+" />
+                    <CountUp end={745} suffix="+" />
                 </div>
             </div>
 
