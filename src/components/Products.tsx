@@ -8,7 +8,7 @@ const Products = () => {
             title: "Klar Lite — Day",
             description: "A 24 hour subscription to our Rainbow Six Siege ESP cheat.",
             slug: "/r6-lite-day",
-            image: "https://imagedelivery.net/A5gbiev6F8AaBvp6M146Kw/176b5aa4-59c7-4840-2a30-f533cf31d300/w=500",
+            image: "https://imagedelivery.net/A5gbiev6F8AaBvp6M146Kw/176b5aa4-59c7-4840-2a30-f533cf31d300/w=1500",
         },
         {
             title: "Klar Lite — Week",
