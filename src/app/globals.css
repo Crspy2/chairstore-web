@@ -8,3 +8,9 @@
 :root {
     @apply bg-neutral-950 scroll-smooth
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: initial; /* or none */
+    }
+}

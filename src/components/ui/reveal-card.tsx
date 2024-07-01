@@ -20,7 +20,7 @@ const RevealCard = ({
         <div
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="border group/canvas-card flex items-center justify-center border-white/[0.2] mx-auto p-4 relative max-w-sm w-full h-full aspect-square"
+            className="bg-zinc-950 border group/canvas-card flex items-center justify-center border-white/[0.2] mx-auto p-4 relative max-w-sm w-full h-full aspect-square"
         >
             <Icon className="absolute h-6 w-6 -top-3 -left-3 text-gray-50" />
             <Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-gray-50" />

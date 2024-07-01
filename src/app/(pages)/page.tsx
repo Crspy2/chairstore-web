@@ -1,17 +1,17 @@
 import Hero from "@/components/Hero";
 import FAQ from "@/components/FAQ";
-import Products from "@/components/Products";
-import Info from "@/components/Info";
+import Products from "../../components/Groups";
+import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
-        <main className="dark">
+        <div className="dark">
             <Hero />
-            <Info />
+            <Features />
             <Products />
             <FAQ />
             <Footer />
-        </main>
+        </div>
     );
 }

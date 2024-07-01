@@ -8,7 +8,7 @@ const Navbar = () => {
     const path  = usePathname();
 
     return (
-        <nav className={`dark bg-neutral-900/20 border-b-white/10 rounded-full fixed z-[9999] w-full sm:px-4 py-2.5 top-0 left-0 backdrop-filter backdrop-blur-md border-b`}>
+        <nav className={`dark bg-neutral-900/20 border-b-white/10 rounded-full fixed z-[9999] w-full mt-2 sm:px-4 py-2.5 top-0 left-0 backdrop-filter backdrop-blur-md border-b`}>
             <div className="flex flex-wrap items-center justify-between px-8">
                 <div className="flex items-center">
                     <Link href="/#" className="flex items-center">

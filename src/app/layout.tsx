@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         type: "website",
         url: "https://chairstore.vip",
         title: "ChairStore",
-        description: "Powerful, secure, and undetected cheats for a fair price. ChairStore is dedicated to providing" +
+        description: "Powerful, secure, and undetected cheats for a fair price. ChairStore is dedicated to providing " +
             "customers with tools to make their games easier to win.",
         siteName: "ChairStore",
         images: [{
@@ -34,7 +34,6 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-            <Navbar />
                 {children}
             </body>
         </html>

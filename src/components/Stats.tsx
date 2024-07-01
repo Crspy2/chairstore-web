@@ -3,20 +3,27 @@
 import {Star} from "lucide-react";
 import CountUp from "react-countup";
 
-const Stats = () => {
+type HeaderData = {
+    description: string,
+    productssold: number,
+    customers: number
+}
+
+
+const Stats = ({data}: {data: HeaderData}) => {
     return (
         <div className="z-10 mt-12 stats shadow bg-neutral-900">
             <div className="flex flex-col stat justify-center items-center w-[30dvh]">
                 <div className="stat-title text-gray-400">Products Sold</div>
                 <div className="stat-value text-gray-200">
-                    <CountUp end={14.3} decimals={1} decimal="." suffix="K+" />
+                    <CountUp end={data.productssold} decimals={1} decimal="." suffix="K+" />
                 </div>
             </div>
 
             <div className="flex flex-col stat justify-center items-center w-[30dvh]">
                 <div className="stat-title text-gray-400">Customers</div>
                 <div className="stat-value text-gray-200">
-                    <CountUp end={745} suffix="+" />
+                    <CountUp end={data.customers} suffix="+" />
                 </div>
             </div>
 
