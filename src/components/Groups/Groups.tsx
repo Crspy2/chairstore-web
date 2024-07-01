@@ -19,6 +19,7 @@ const Groups = ({ groups }: { groups: GroupInfo[]}) => {
 
                 {groups.map((item) => (
                     <button 
+                        key={item.uniqid}
                         data-sellix-group={item.uniqid}
                         type="submit"
                         className="flex flex-col w-5/6 border border-slate-200/70 rounded-lg opacity-80 hover:opacity-100 transition duration-300 ease-in-out overflow-hidden"
