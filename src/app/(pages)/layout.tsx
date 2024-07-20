@@ -1,4 +1,5 @@
- import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 export default function PageLayout({
     children,
@@ -9,6 +10,7 @@ export default function PageLayout({
         <main>
             <Navbar />
             {children}
+            <Footer />
         </main>
     );
 }

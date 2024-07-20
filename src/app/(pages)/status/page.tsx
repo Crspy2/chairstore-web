@@ -6,7 +6,9 @@ type Status = {
 }
 
 export default async function Status() {
-    const statuses: Status[] = await client.fetch('*[_type == "status"] | order(_createdAt asc)')
+    const statuses: Status[] = await client.fetch('*[_type == "status"] | order(_createdAt asc)', {}, {
+        cache: "no-cache"
+    })
 
     return (
         <main className="dark mt-36">
