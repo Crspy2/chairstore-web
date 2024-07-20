@@ -7,7 +7,9 @@ type Status = {
 
 export default async function Status() {
     const statuses: Status[] = await client.fetch('*[_type == "status"] | order(_createdAt asc)', {}, {
-        cache: "no-cache"
+        next: {
+            revalidate: 3600,
+        }
     })
 
     return (
